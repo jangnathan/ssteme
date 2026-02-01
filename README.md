@@ -24,6 +24,7 @@ works on linux and mac
 
 ## instructions
 ```
+ssteme cache
 ssteme compile
 ssteme link
 ```
@@ -40,4 +41,10 @@ ssteme hydrate main.c
 ```
 src="main.c","src/"
 out="program_name"
+```
+
+after ANY file structure update or a new file
+Or a config file change, you must cache them like this
+```
+ssteme cache
 ```
