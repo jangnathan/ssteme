@@ -36,7 +36,7 @@ hydration:
 ssteme hydrate main.c
 ```
 
-configuration:
+## configuration (in ssteme.cfg)
 ```
 src="main.c","src/"
 out="program_name"
