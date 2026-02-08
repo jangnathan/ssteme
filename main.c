@@ -160,8 +160,8 @@ int main(int argc, char *argv[]) {
 		strcat(cmd_buf, OBJECTS_PATH);
 		strcat(cmd_buf, "/");
 		path2outname(path);
+		path[strlen(path) - 1] = 'o';
 		strcat(cmd_buf, path);
-		strcat(cmd_buf, ".o");
 		system(cmd_buf);
 	} else if (strcmp(command, "link") == 0) {
 		cache2config(&config);

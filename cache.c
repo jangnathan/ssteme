@@ -35,13 +35,11 @@ uint8_t recurse_find(char *path, src_t *src) {
 			snprintf(full, sizeof(full), "%s/", full);
 			return recurse_find(full, src);
 		} else {
-			if (!is_valid_src(full)) {
-				fprintf(stderr, "%s must end in .c", full);
-				return 0;
+			if (is_valid_src(full)) {
+				uint8_t len = strlen(full);
+				full[len - 2] = '\0';
+				src_add(src, full);
 			}
-			uint8_t len = strlen(full);
-			full[len - 2] = '\0';
-			src_add(src, full);
 		}
 	}
 
